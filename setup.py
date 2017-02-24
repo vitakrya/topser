@@ -1,11 +1,26 @@
 from setuptools import setup
 
+def readme():
+      with open('README.rst') as f:
+            return f.read()
+
 setup(name='topser',
       version='0.1',
       description='The simple package',
+      long_description=readme(),
+      classifiers=[
+            'Development Status :: 1 - Alpha',
+            'License :: OSI Approved :: MIT License',
+            'Programming Language :: Python :: 3.4',
+            'Topic :: Text Processing :: Linguistic',
+      ],
       url='http://github.com/vitakrya/topser',
       author='Vita Kr',
       author_email='vinder_2@mail.ru',
       license='MIT',
       packages=['topser'],
+      install_requires=[
+            'markdown',
+      ],
+      include_package_data=True,
       zip_safe=False)
