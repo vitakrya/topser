@@ -23,4 +23,7 @@ setup(name='topser',
             'markdown',
       ],
       include_package_data=True,
-      zip_safe=False)
+      scripts=['bin/topser-pont'],
+      zip_safe=False,
+      test_suite='nose.collector',
+      test_require=['nose'],)
